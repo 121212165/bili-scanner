@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "B站扫榜助手 · 低粉爆文探测器",
+  "version": "0.2.0",
+  "description": "在B站搜索/热门/排行榜页标注 播放/粉丝 爆文率，高亮低粉爆文。纯匿名：不登录、不带Cookie、无后端。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://search.bilibili.com/*",
+        "https://www.bilibili.com/v/popular/*",
+        "https://www.bilibili.com/v/recommend*",
+        "https://www.bilibili.com/ranking*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://api.bilibili.com/*"
+  ]
+}
